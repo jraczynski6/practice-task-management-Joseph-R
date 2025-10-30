@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router';
 import './App.css';
 import TaskList from './components/TaskList';
-import TaskDetail from './components/TaskList';
+import TaskDetail from './components/TaskDetail';
 
 function App() {
   const taskData = [
