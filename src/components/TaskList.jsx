@@ -28,19 +28,16 @@ const TaskList = () => {
             <ul>
                 {taskData.map((task) => {
                     return (
-                        
-                        <Link to={"/details" + ${task.id}} key={task.id}>
-                            <li> {task.title} 
-                        </Link>
-                        </li>
-                       
-                        
+                        <li key={task.id}>
+                            <Link to={"/details" + task.id} key={task} >
+                            {task.title}
+                            </Link>
+                           </li>                        
                     );
                 })}
             </ul>
                 {/* <TaskDetail task={taskData} /> */}
                 <TaskDetail task={taskData} />
-            
         </div>
     );
 
