@@ -1,4 +1,5 @@
 import TaskDetail from "./TaskDetail";
+import { Link } from "react-router";
 
 const TaskList = () => {
 
@@ -23,19 +24,22 @@ const TaskList = () => {
     
     return (
         <div>
-            <h>Task list</h>
+            <h2>Task list</h2>
             <ul>
                 {taskData.map((task) => {
                     return (
-                        <li key={task.id}>
-                            {task.title}
+                        
+                        <Link to={"/details" + ${task.id}} key={task.id}>
+                            <li> {task.title} 
+                        </Link>
                         </li>
+                       
                         
                     );
                 })}
             </ul>
                 {/* <TaskDetail task={taskData} /> */}
-                TaskDetail(taskData);
+                <TaskDetail task={taskData} />
             
         </div>
     );
