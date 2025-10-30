@@ -1,16 +1,71 @@
-# React + Vite
+Practice: Task Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Instructions
 
-Currently, two official plugins are available:
+You will create a React application that:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Displays a list of tasks on the main page.
 
-## React Compiler
+2. Allows users to navigate to a specific task's detail page using URL
+parameters.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. Handles edge cases like invalid or missing task IDs.
 
-## Expanding the ESLint configuration
+This activity reinforces the use of React Router's dynamic routes and the useParams
+hook.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Steps
+
+Step 1: Set Up the Application
+
+Install React Router:
+
+Run the following command to install React Router:
+
+npm install react-router
+
+Create the File Structure:
+
+● App.jsx: Main component to set up routes.
+
+● src/components/TaskList.jsx: Component displaying a list of tasks.
+
+● src/components/TaskDetail.jsx: Component displaying details of a specific
+task.
+
+Step 2: Define Task Data
+
+Create a mock task dataset in a separate file or directly within the TaskList
+component. Each task object should have id, title and description properties.
+
+Step 3: Create the TaskList Component
+
+● Display a list of tasks with links to their detail pages.
+
+● Include your mock task dataset from step 2 inside of the TaskList
+component.
+
+● Use the .map() method to iterate through tasks.
+
+● Make sure to create a Link component that navigates to /task/${task.id}.
+
+Step 4: Create the TaskDetail Component
+
+Retrieve the task ID from the URL and display the corresponding task details.
+
+Step 5: Configure Routes in App.jsx
+
+Set up the routes to display the task list and task details.
+
+Step 6: Add Styling
+
+To improve user experience, add some basic styling to differentiate the task list and
+detail pages.
+
+Deliverables Create a fully functional task viewer where:
+
+● The task list displays clickable links.
+
+● Each link navigates to a detail page for the corresponding task.
+
+● Invalid or missing task IDs are handled gracefully with an error message.
