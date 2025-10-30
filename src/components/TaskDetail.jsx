@@ -7,7 +7,7 @@ export default function TaskDetail({ tasks }) {
 
 
     return (
-        <div>
+        <div className="container">
             <h2>Task Details</h2>
             <h3>{task.title}</h3>
             <p>{task.description}</p>

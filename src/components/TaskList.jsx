@@ -4,7 +4,7 @@ import { Link } from "react-router";
 export default function TaskList({ tasks }) {
     console.log(tasks);
     return (
-        <div>
+        <div className="container">
             <h2>Task list</h2>
             <ul>
                 {tasks.map(task => (
