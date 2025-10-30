@@ -11,6 +11,7 @@ export default function TaskDetail({ tasks }) {
             <h2>Task Details</h2>
             <h3>{task.title}</h3>
             <p>{task.description}</p>
+            <Link to="/">Back to list</Link>
         </div>
     );
 };
